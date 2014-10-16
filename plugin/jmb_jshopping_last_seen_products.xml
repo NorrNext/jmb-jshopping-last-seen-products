@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="plugin" group="jshoppingproducts" method="upgrade">
+	<name>plg_jmb_jshopping_last_seen_products</name>
+	<author>Denis Ryabov and Dmitry Rekun</author>
+	<creationDate>2014-10-12</creationDate>
+	<copyright>(c) 2014 NorrNext</copyright>
+	<license>GNU General Public License version 3 or later; see license.txt</license>
+	<authorEmail>support@norrnext.com</authorEmail>
+	<authorUrl>http://norrnext.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jmb_jshopping_last_seen_products">jmb_jshopping_last_seen_products.php</filename>
+		<folder>fields</folder>
+		<folder>language</folder>
+	</files>
+	<scriptfile>install.php</scriptfile>
+	<config>
+		<fields name="params">
+			<fieldset name="jmb_jslsp_description"
+				addfieldpath="/plugins/jshoppingproducts/jmb_jshopping_last_seen_products/fields">
+				<field
+						name="description"
+						type="jmb.description"
+						label=""
+						/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="NorrNext updates server">http://norrnext.com/updates/joomla/plugins/jmb_jshopping_last_seen_products.xml</server>
+	</updateservers>
+</extension>

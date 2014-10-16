@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3" client="site" method="upgrade">
+	<name>mod_jmb_jshopping_last_seen_products</name>
+	<author>Denis Ryabov and Dmitry Rekun</author>
+	<creationDate>2014-10-12</creationDate>
+	<copyright>(c) 2014 NorrNext</copyright>
+	<license>GNU General Public License version 3 or later; see license.txt</license>
+	<authorEmail>support@norrnext.com</authorEmail>
+	<authorUrl>http://norrnext.com</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_jmb_jshopping_last_seen_products">mod_jmb_jshopping_last_seen_products.php</filename>
+		<folder>fields</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="products_count"
+					type="text"
+					class="input-mini"
+					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_COUNT_LABEL"
+					default="5"
+					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_COUNT_DESC" />
+
+				<field
+					name="module_style"
+					type="radio"
+					default="0"
+					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_MODULE_STYLE_LABEL"
+					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_MODULE_STYLE_DESC">
+					<option value="0">MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_VERTICAL</option>
+					<option value="1">MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_HORIZONTAL</option>
+				</field>
+
+				<field
+					name="show_image"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_IMAGE_LABEL"
+					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="show_name"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_NAME_LABEL"
+					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_NAME_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="show_price"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_PRICE_LABEL"
+					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_PRICE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+						name="show_old_price"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="1"
+						label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_OLD_PRICE_LABEL"
+						description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_OLD_PRICE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+						name="show_backlink"
+						type="radio"
+						class="btn-group btn-group-yesno"
+						default="1"
+						label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_BACKLINK_LABEL"
+						description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_SHOW_BACKLINK_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+						name="layout"
+						type="modulelayout"
+						label="JFIELD_ALT_LAYOUT_LABEL"
+						description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+						name="moduleclass_sfx"
+						type="text"
+						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+						name="cache"
+						type="list"
+						default="1"
+						label="COM_MODULES_FIELD_CACHING_LABEL"
+						description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+				</field>
+
+				<field
+						name="cache_time"
+						type="text"
+						default="900"
+						label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+						description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+						name="cachemode"
+						type="hidden"
+						default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+
+			<fieldset name="jmb_jslsp_description"
+					  addfieldpath="/modules/mod_jmb_jshopping_last_seen_products/fields">
+
+				<field
+					name="description"
+					type="jmb.description"
+					label=""
+				/>
+
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="NorrNext updates server">http://norrnext.com/updates/joomla/modules/jmb_jshopping_last_seen_products.xml</server>
+	</updateservers>
+</extension>
