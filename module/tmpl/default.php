@@ -55,7 +55,7 @@ if (!empty($products)) : ?>
 <?php endif; ?>
 
 <?php if ($params->get('show_backlink', 1)) : ?>
-	<div style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 7pt; text-decoration: none">
+	<div style="text-align: right; clear: both; font-family: Arial, Helvetica, sans-serif; font-size: 7pt; text-decoration: none">
 		<?php echo JText::_('MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_BACKLINK'); ?>
 	</div>
 <?php endif;
