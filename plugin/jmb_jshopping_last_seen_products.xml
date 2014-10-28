@@ -28,6 +28,6 @@
 		</fields>
 	</config>
 	<updateservers>
-		<server type="extension" priority="1" name="NorrNext updates server">http://norrnext.com/updates/joomla/plugins/jmb_jshopping_last_seen_products.xml</server>
+		<server type="extension" priority="1" name="NorrNext updates server">http://norrnext.com/updates/joomla/plugins/jmb_jshopping_last_seen_products_update.xml</server>
 	</updateservers>
 </extension>
