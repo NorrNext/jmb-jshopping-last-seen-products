@@ -27,8 +27,14 @@
 	</target>
 
 	<target name="make" description="Builds the extension release package for a version." depends="rebuild-extension-archives">
-		<echo msg="Making the ${package} package for version ${version}." />
+		<echo msg="Deleting old version package." />
+		<delete quiet="yes" includeemptydirs="true">
+			<fileset dir="releases">
+				<include name="pkg_${package}_${version}.zip" />
+			</fileset>
+		</delete>
 
+		<echo msg="Making the ${package} package for version ${version}." />
 		<zip destfile="releases/pkg_${package}_${version}.zip">
 			<fileset dir="build">
 				<include name="**" />
@@ -36,16 +42,18 @@
 		</zip>
 	</target>
 
-	<target name="rebuild-extension-archives" description="Rebuilds the archive (zip) files for each extension.">
-		<mkdir dir="build" />
-		<mkdir dir="releases" />
-
+	<target name="clean-build">
 		<echo msg="Cleaning build directory." />
 		<delete quiet="yes" includeemptydirs="true">
-			<fileset dir="*">
-				<include name="build" />
+			<fileset dir="build">
+				<include name="**" />
 			</fileset>
 		</delete>
+	</target>
+
+	<target name="rebuild-extension-archives" description="Rebuilds the archive (zip) files for each extension." depends="clean-build">
+		<mkdir dir="build" />
+		<mkdir dir="releases" />
 
 		<echo msg="Creating extension archives (zip files)." />
 		<foreach param="extension" target="build-archive">
@@ -64,7 +72,12 @@
 	</target>
 
 	<target name="build-archive" description="Builds an archive for a single extension.">
-		<zip destfile="build/${extension}.zip" basedir="${extension}" />
+		<zip destfile="build/${extension}.zip">
+			<fileset dir="${extension}">
+				<include name="**" />
+				<exclude name="jmb_jshopping_last_seen_products_update.xml" />
+			</fileset>
+		</zip>
 	</target>
 
 	<target name="tag" description="Tags the repository using git.">
