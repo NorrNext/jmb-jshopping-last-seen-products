@@ -8,21 +8,18 @@
 
 defined('_JEXEC') or die;
 
+if ($params->get('module_style', 1)){
+ JHtml::stylesheet('mod_jmb_jshopping_last_seen_products/horizontal/style.css', false, true);
+}
+
 if (!empty($products)) : ?>
-	<div class="jshop last_seen_products<?php echo $moduleclass_sfx; ?>">
-		<?php $style = 'padding: 5px;';
-
-		if ($params->get('module_style', 1))
-		{
-			$style = 'float: left; padding: 5px;';
-		}
-
-		foreach ($products as $product) : ?>
-			<div class="block_item" style="<?php echo $style; ?>">
+	<div class="jmb-jslsp <?php echo $moduleclass_sfx; ?>">
+		<?php foreach ($products as $product) : ?>
+			<div class="jmb-jslsp-block-item" >
 				<?php if ($params->get('show_image', 1)) : ?>
-					<div class="item_image">
+					<div class="jmb-jslsp-item-image">
 						<?php if ($product->labelImage) : ?>
-							<div class="product_label">
+							<div class="jmb-jslsp-product-label">
 								<img src="<?php echo $product->labelImage ?>" alt="<?php echo $product->labelName ?>"/>
 							</div>
 						<?php endif; ?>
@@ -33,17 +30,17 @@ if (!empty($products)) : ?>
 					</div>
 				<?php endif; ?>
 				<?php if ($params->get('show_name', 1)) : ?>
-					<div class="item_name">
+					<div class="jmb-jslsp-item-name">
 						<a href="<?php echo $product->link ?>"><?php echo $product->name ?></a>
 					</div>
 				<?php endif; ?>
 				<?php if ($params->get('show_price', 1)) : ?>
 					<?php if ($params->get('show_old_price', 1) && !empty($product->oldPriceCurrency)) : ?>
-						<span style="text-decoration: line-through">
+						<span>
 							<?php echo formatprice($product->oldPriceCurrency); ?>
 						</span>
 					<?php endif; ?>
-					<div class="item_price">
+					<div class="jmb-jslsp-item-price">
 						<?php echo formatprice($product->priceCurrency); ?>
 					</div>
 				<?php endif; ?>

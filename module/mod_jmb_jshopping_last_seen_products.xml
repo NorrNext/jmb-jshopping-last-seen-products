@@ -16,9 +16,14 @@
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 	</files>
+	<media destination="mod_jmb_jshopping_last_seen_products" folder="media">
+		<folder>vertical</folder>
+		<folder>horizontal</folder>
+	</media>	
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
+			
 				<field
 					name="products_count"
 					type="text"
@@ -26,15 +31,16 @@
 					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_COUNT_LABEL"
 					default="5"
 					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_COUNT_DESC" />
-
+					
 				<field
-					name="module_style"
+					name="include_css"
 					type="radio"
-					default="0"
-					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_MODULE_STYLE_LABEL"
-					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_MODULE_STYLE_DESC">
-					<option value="0">MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_VERTICAL</option>
-					<option value="1">MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_HORIZONTAL</option>
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_INCLUDE_CSS_LABEL"
+					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_INCLUDE_CSS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 
 				<field

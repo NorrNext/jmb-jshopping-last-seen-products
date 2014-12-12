@@ -25,4 +25,6 @@ JSFactory::loadLanguageFile();
 $products           = ModJmbJShoppingLastSeenProducts::getLastSeenProducts($params);
 $moduleclass_sfx    = htmlspecialchars($params->get('moduleclass_sfx'));
 
-require JModuleHelper::getLayoutPath('mod_jmb_jshopping_last_seen_products');
+$layout = $params->get('layout', 'horizontal');
+
+require JModuleHelper::getLayoutPath('mod_jmb_jshopping_last_seen_products', $params->get('layout', 'horizontal'));

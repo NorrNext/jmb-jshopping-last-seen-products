@@ -1,0 +1,16 @@
+.jmb-jslsp.jmb-jslsp-horizontal .jmb-jslsp-block-item {
+	margin-right: 10px;
+	padding: 10px;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+.jmb-jslsp.jmb-jslsp-horizontal .jmb-jslsp-block-item:last-child {
+	margin-right: 0;
+}
+.jmb-jslsp.jmb-jslsp-horizontal .jmb-jslsp-block-item .jmb-jslsp-item-image{
+	margin-bottom: 15px;
+}
+.jmb-jslsp.jmb-jslsp-horizontal .jmb-jslsp-block-item .jmb-jslsp-item-price{
+	font-size: 90%;
+	text-transform: uppercase;
+}

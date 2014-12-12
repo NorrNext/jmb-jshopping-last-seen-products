@@ -31,6 +31,7 @@ class JmbFormFieldDescription extends JFormField
 	protected function getInput()
 	{
 		$html = '<div class="row-fluid">';
+		$html .= '<img class="pull-left img-polaroid" style="margin-right:10px;width:125px;" src="'. JURI::root() .'/modules/mod_jmb_jshopping_last_seen_products/fields/jmb-jshopping-last-seen-products.png" />';
 		$html .= JText::_('MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_DESCRIPTION');
 		$html .= '</div>';
 		$html .= '<div class="row-fluid" style="margin-top: 20px">';
