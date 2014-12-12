@@ -13,7 +13,7 @@ if ($params->get('module_style', 1)){
 }
 
 if (!empty($products)) : ?>
-	<div class="jmb-jslsp <?php echo $moduleclass_sfx; ?>">
+	<div class="jmb-jslsp jmb-jslsp-horizontal <?php echo $moduleclass_sfx; ?>">
 		<?php foreach ($products as $product) : ?>
 			<div class="jmb-jslsp-block-item" >
 				<?php if ($params->get('show_image', 1)) : ?>
