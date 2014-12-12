@@ -14,3 +14,8 @@
 	font-size: 90%;
 	text-transform: uppercase;
 }
+
+.jmb-jslsp.jmb-jslsp-horizontal .jmb-jslsp-block-item .jmb-jslsp-item-oldprice{
+	text-decoration: line-through;
+	color: #F00;
+}

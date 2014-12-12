@@ -3,9 +3,9 @@
 	padding: 10px;
 	margin-bottom: 15px;
 }
-.jmb-jslsp.jmb-jslsp-vertical .jmb-jslsp-block-item .jmb-jslsp-item-image{
-
-}
-.jmb-jslsp.jmb-jslsp-vertical .jmb-jslsp-block-item .jmb-jslsp-item-price{
-
+.jmb-jslsp.jmb-jslsp-vertical .jmb-jslsp-block-item .jmb-jslsp-item-image{}
+.jmb-jslsp.jmb-jslsp-vertical .jmb-jslsp-block-item .jmb-jslsp-item-price{}
+.jmb-jslsp.jmb-jslsp-horizontal .jmb-jslsp-block-item .jmb-jslsp-item-oldprice{
+	text-decoration: line-through;
+	color: #F00;
 }

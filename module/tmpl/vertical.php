@@ -36,7 +36,7 @@ if (!empty($products)) : ?>
 				<?php endif; ?>
 				<?php if ($params->get('show_price', 1)) : ?>
 					<?php if ($params->get('show_old_price', 1) && !empty($product->oldPriceCurrency)) : ?>
-						<span>
+						<span class="jmb-jslsp-item-oldprice">
 							<?php echo formatprice($product->oldPriceCurrency); ?>
 						</span>
 					<?php endif; ?>
