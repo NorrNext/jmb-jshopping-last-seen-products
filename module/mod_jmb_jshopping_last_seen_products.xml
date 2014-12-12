@@ -37,7 +37,7 @@
 					type="radio"
 					class="btn-group btn-group-yesno"
 					default="1"
-					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_INCLUDE_CSS_LABEL"
+					label="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_INCLUDE_CSS"
 					description="MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_FIELD_INCLUDE_CSS_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
