@@ -2,7 +2,7 @@
 /**
  * @package    Jmb_JShopping_Last_Seen_Products
  * @author     Dmitry Rekun <support@norrnext.com>
- * @copyright  Copyright (C) 2014 NorrNext. All rights reserved.
+ * @copyright  Copyright (C) 2015 NorrNext. All rights reserved.
  * @license    GNU General Public License version 3 or later; see license.txt
  */
 

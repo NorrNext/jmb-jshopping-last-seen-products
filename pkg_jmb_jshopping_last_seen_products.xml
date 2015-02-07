@@ -2,8 +2,8 @@
 <extension version="3.3" type="package">
 	<name>pkg_jmb_jshopping_last_seen_products</name>
 	<author>Dmitry Rekun</author>
-	<creationDate>2014-10-12</creationDate>
-	<copyright>(c) 2014 NorrNext</copyright>
+	<creationDate>2015-10-12</creationDate>
+	<copyright>(c) 2015 NorrNext</copyright>
 	<license>GNU General Public License version 3 or later; see license.txt</license>
 	<packagename>jmb_jshopping_last_seen_products</packagename>
 	<packager>NorrNext</packager>
