@@ -2,13 +2,13 @@
 <updates>
 	<update>
 		<name>JMB JShopping Last Seen Products</name>
-		<description></description>
+		<description>JMB JShopping Last Seen Products package</description>
 		<element>pkg_jmb_jshopping_last_seen_products</element>
 		<type>package</type>
 		<infourl title="NorrNext">http://norrnext.com/joomla-extensions/jmb-jshopping-last-seen-products</infourl>
 		<version>1.0.1</version>
 		<downloads>
-			<downloadurl type="full" format="zip">http://norrnext.com/phocadownload/Free_Joomla/JMB_JShopping_Last_Seen_Products/pkg_jmb_jshopping_last_seen_products_1.0.1.zip</downloadurl>
+			<downloadurl type="full" format="zip">http://norrnext.com/nnt_downloads/free/pkg_jmb_jshopping_last_seen_products_1.0.1.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>stable</tag>
