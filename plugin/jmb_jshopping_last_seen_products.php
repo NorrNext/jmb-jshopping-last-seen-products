@@ -9,7 +9,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Plugin's base class
+ * The base class of plugin
  *
  * @package  Jmb_JShopping_Last_Seen_Products
  * @since    1.0
@@ -42,7 +42,7 @@ class PlgJshoppingproductsJmb_Jshopping_Last_Seen_Products extends JPlugin
 
 		$db = JFactory::getDbo();
 
-		$query = "INSERT INTO #__jmb_jshopping_last_seen_products (`product_id`, `time`, `data`)"
+		$query = "INSERT INTO `#__jmb_jshopping_last_seen_products` (`product_id`, `time`, `data`)"
 			. " VALUES ($product_id, NOW(), " . $db->quote(json_encode($lastSeenProduct)) . ")"
 			. " ON DUPLICATE KEY UPDATE `time` = VALUES(`time`), `data` = VALUES(`data`)";
 

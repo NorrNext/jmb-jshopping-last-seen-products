@@ -9,7 +9,7 @@
 defined('_JEXEC') or die();
 
 /**
- * Module's helper class
+ * The helper class of a module
  *
  * @package  Jmb_JShopping_Last_Seen_Products
  * @since    1.0
