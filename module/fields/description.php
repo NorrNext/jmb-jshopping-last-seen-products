@@ -2,7 +2,7 @@
 /**
  * @package    Jmb_JShopping_Last_Seen_Products
  * @author     Dmitry Rekun <support@norrnext.com>
- * @copyright  Copyright (C) 2014 NorrNext. All rights reserved.
+ * @copyright  Copyright (C) 2015 NorrNext. All rights reserved.
  * @license    GNU General Public License version 3 or later; see license.txt
  */
 
@@ -31,6 +31,7 @@ class JmbFormFieldDescription extends JFormField
 	protected function getInput()
 	{
 		$html = '<div class="row-fluid">';
+		$html .= '<img class="pull-left img-polaroid" style="margin-right:10px;width:125px;" src="' . JUri::root() . 'modules/mod_jmb_jshopping_last_seen_products/fields/jmb_js_last_seen_products.png" />';
 		$html .= JText::_('MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_DESCRIPTION');
 		$html .= '</div>';
 		$html .= '<div class="row-fluid" style="margin-top: 20px">';

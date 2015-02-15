@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JMB JShopping Last Seen Products" default="make" basedir=".">
+	<tstamp>
+		<format property="build.date" pattern="%Y-%m-%d" />
+	</tstamp>
+
+	<property file="build.ini" />
+
+	<target name="help">
+		<echo>Use `$ phing -l` to list the available targets.</echo>
+	</target>
+
+	<target name="make-dev" description="Builds the extension release package for development testing." depends="rebuild-extension-archives">
+		<echo msg="Deleting old development build." />
+		<delete quiet="yes" includeemptydirs="true">
+			<fileset dir="releases">
+				<include name="pkg_${package}_dev.zip" />
+			</fileset>
+		</delete>
+
+		<echo msg="Making the development ${package} package." />
+		<zip destfile="releases/pkg_${package}_dev.zip">
+			<fileset dir="build">
+				<include name="**" />
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="make" description="Builds the extension release package for a version." depends="rebuild-extension-archives">
+		<echo msg="Deleting old version package." />
+		<delete quiet="yes" includeemptydirs="true">
+			<fileset dir="releases">
+				<include name="pkg_${package}_${version}.zip" />
+			</fileset>
+		</delete>
+
+		<echo msg="Making the ${package} package for version ${version}." />
+		<zip destfile="releases/pkg_${package}_${version}.zip">
+			<fileset dir="build">
+				<include name="**" />
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="clean-build">
+		<echo msg="Cleaning build directory." />
+		<delete quiet="yes" includeemptydirs="true">
+			<fileset dir="build">
+				<include name="**" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="rebuild-extension-archives" description="Rebuilds the archive (zip) files for each extension." depends="clean-build">
+		<mkdir dir="build" />
+		<mkdir dir="releases" />
+
+		<echo msg="Creating extension archives (zip files)." />
+		<foreach param="extension" target="build-archive">
+			<fileset dir=".">
+				<include name="module" />
+				<include name="plugin" />
+			</fileset>
+		</foreach>
+
+		<copy todir="build" >
+			<fileset dir=".">
+				<include name="language/**" />
+				<include name="pkg_${package}.xml" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build-archive" description="Builds an archive for a single extension.">
+		<zip destfile="build/${extension}.zip">
+			<fileset dir="${extension}">
+				<include name="**" />
+				<exclude name="jmb_jshopping_last_seen_products_update.xml" />
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="tag" description="Tags the repository using git.">
+		<gitcommit repository="." message="Tagging release `${version}`." allFiles="true" />
+		<gittag repository="." name="${version}" annotate="true" message="${version}" />
+		<echo>Push tags manually with `$ git push --tags origin`.</echo>
+	</target>
+
+	<target name="set-version" description="Sets the &lt;version&gt; tag in all XML files with the version from the build.ini file.">
+		<phingcall target="replace-xml">
+			<property name="tag" value="version" />
+			<property name="tagValue" value="${version}" />
+		</phingcall>
+	</target>
+
+	<target name="replace-xml" description="[PRIVATE] Sets an XML tag with a new value.">
+		<echo message="Replacing '${tag}' tag with '${tagValue}'."/>
+		<reflexive>
+			<fileset dir=".">
+				<include pattern="**/*.xml" />
+			</fileset>
+			<filterchain>
+				<replaceregexp>
+					<regexp pattern="&lt;${tag}&gt;(.*?)&lt;/${tag}&gt;"
+							replace="&lt;${tag}&gt;${tagValue}&lt;/${tag}&gt;"/>
+				</replaceregexp>
+			</filterchain>
+		</reflexive>
+	</target>
+</project>
