@@ -23,10 +23,10 @@ if (!empty($products)) : ?>
 					<div class="item_image">
 						<?php if ($product->labelImage) : ?>
 							<div class="product_label">
-								<img src="<?php echo $product->labelImage ?>" alt="<?php echo $product->labelName ?>"/>
+								<img src="<?php echo JUri::root() . $product->labelImage ?>" alt="<?php echo $product->labelName ?>" />
 							</div>
 						<?php endif; ?>
-						<a href="<?php echo $product->link ?>">
+						<a href="<?php echo SEFLink('index.php?option=com_jshopping&controller=product&task=view&category_id=' . $product->category_id .'&product_id=' . $product->product_id, 1); ?>">
 							<img src="<?php echo $jshopConfig->image_product_live_path ?>/<?php if ($product->image) echo 'thumb_' . $product->image;
 							else echo 'noimage.gif'; ?>" alt="Product image"/>
 						</a>

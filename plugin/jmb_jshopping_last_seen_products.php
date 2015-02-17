@@ -33,11 +33,11 @@ class PlgJshoppingproductsJmb_Jshopping_Last_Seen_Products extends JPlugin
 		$lastSeenProduct->name                = $product->name;
 		$lastSeenProduct->product_id          = $product->product_id;
 		$lastSeenProduct->image               = $product->image;
-		$lastSeenProduct->link                = $_SERVER['REQUEST_URI'];
+		$lastSeenProduct->category_id         = $product->product_categories[0]->category_id;
 		$lastSeenProduct->price               = $product->product_price;
 		$lastSeenProduct->oldPrice            = $product->product_old_price;
 		$lastSeenProduct->currencyId          = $product->currency_id;
-		$lastSeenProduct->labelImage          = $product->_label_image;
+		$lastSeenProduct->labelImage          = str_replace(JUri::root(), '', $product->_label_image);
 		$lastSeenProduct->labelName           = $product->_label_name;
 
 		$db = JFactory::getDbo();
