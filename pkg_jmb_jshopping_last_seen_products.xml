@@ -2,16 +2,16 @@
 <extension version="3.3" type="package">
 	<name>pkg_jmb_jshopping_last_seen_products</name>
 	<author>Dmitry Rekun</author>
-	<creationDate>2015-02-17</creationDate>
+	<creationDate>2015-05-19</creationDate>
 	<copyright>(c) 2015 NorrNext</copyright>
 	<license>GNU General Public License version 3 or later; see license.txt</license>
 	<packagename>jmb_jshopping_last_seen_products</packagename>
 	<packager>NorrNext</packager>
 	<packageremail>support@norrnext.com</packageremail>
-	<packagerurl>http://norrnext.com</packagerurl>
-	<version>1.0.1</version>
+	<packagerurl>https://www.norrnext.com</packagerurl>
+	<version>1.0.2</version>
 	<description>PKG_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_XML_DESCRIPTION</description>
-	<update>http://norrnext.com</update>
+	<update>https://www.norrnext.com</update>
 	<files>
 		<file type="module" id="mod_jmb_jshopping_last_seen_products" client="site">module.zip</file>
 		<file type="plugin" id="jmb_jshopping_last_seen_products" group="jshoppingproducts">plugin.zip</file>
@@ -24,6 +24,6 @@
 		<server
 			type="extension"
 			priority="1"
-			name="NorrNext updates server">http://norrnext.com/updates/joomla/packages/jmb_jshopping_last_seen_products_update.xml</server>
+			name="NorrNext Update Server">https://www.norrnext.com/updates/joomla/packages/jmb_jshopping_last_seen_products_update.xml</server>
 	</updateservers>
 </extension>
