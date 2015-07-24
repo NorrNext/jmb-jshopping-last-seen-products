@@ -18,12 +18,12 @@ file_filter = module\language\<lang>\<lang>.mod_jmb_jshopping_last_seen_products
 source_file = module\language\en-GB\en-GB.mod_jmb_jshopping_last_seen_products.sys.ini
 source_lang = en_GB
 
-[jmb-jshopping-last-seen-products.plg_jshoppingproducts_jmb_jshopping_last_seen_products]
+[jmb-jshopping-last-seen-products.admin-plg_jshoppingproducts_jmb_jshopping_last_seen_products]
 file_filter = plugin\language\<lang>\<lang>.plg_jshoppingproducts_jmb_jshopping_last_seen_products.ini
 source_file = plugin\language\en-GB\en-GB.plg_jshoppingproducts_jmb_jshopping_last_seen_products.ini
 source_lang = en_GB
 
-[jmb-jshopping-last-seen-products.plg_jshoppingproducts_jmb_jshopping_last_seen_products_sys]
+[jmb-jshopping-last-seen-products.admin-plg_jshoppingproducts_jmb_jshopping_last_seen_products_sys]
 file_filter = plugin\language\<lang>\<lang>.plg_jshoppingproducts_jmb_jshopping_last_seen_products.sys.ini
 source_file = plugin\language\en-GB\en-GB.plg_jshoppingproducts_jmb_jshopping_last_seen_products.sys.ini
 source_lang = en_GB
