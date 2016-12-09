@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.3" type="package">
+<extension version="3.6" type="package">
 	<name>pkg_jmb_jshopping_last_seen_products</name>
 	<author>Dmitry Rekun</author>
-	<creationDate>2015-05-19</creationDate>
-	<copyright>(c) 2015 NorrNext</copyright>
+	<creationDate>2016-12-09</creationDate>
+	<copyright>(c) 2015 - 2016 NorrNext</copyright>
 	<license>GNU General Public License version 3 or later; see license.txt</license>
 	<packagename>jmb_jshopping_last_seen_products</packagename>
 	<packager>NorrNext</packager>
 	<packageremail>support@norrnext.com</packageremail>
 	<packagerurl>https://www.norrnext.com</packagerurl>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<description>PKG_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_XML_DESCRIPTION</description>
 	<update>https://www.norrnext.com</update>
 	<files>

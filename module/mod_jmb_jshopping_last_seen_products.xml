@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.3" client="site" method="upgrade">
+<extension type="module" version="3.6" client="site" method="upgrade">
 	<name>mod_jmb_jshopping_last_seen_products</name>
 	<author>Denis Ryabov and Dmitry Rekun</author>
-	<creationDate>2015-05-19</creationDate>
-	<copyright>(c) 2015 NorrNext</copyright>
+	<creationDate>2016-12-09</creationDate>
+	<copyright>(c) 2015 - 2016 NorrNext</copyright>
 	<license>GNU General Public License version 3 or later; see license.txt</license>
 	<authorEmail>support@norrnext.com</authorEmail>
 	<authorUrl>https://www.norrnext.com</authorUrl>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<description>MOD_JMB_JSHOPPING_LAST_SEEN_PRODUCTS_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_jmb_jshopping_last_seen_products">mod_jmb_jshopping_last_seen_products.php</filename>
