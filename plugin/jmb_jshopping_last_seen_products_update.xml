@@ -6,14 +6,14 @@
 		<element>jmb_jshopping_last_seen_products</element>
 		<type>plugin</type>
 		<folder>jshoppingproducts</folder>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 		<client>site</client>
-		<infourl title="JMB JShopping Last Seen Products plugin">http://norrnext.com/joomla-extensions/jmb-jshopping-last-seen-products</infourl>
+		<infourl title="JMB JShopping Last Seen Products plugin">https://www.norrnext.com/joomla-extensions/jmb-jshopping-last-seen-products</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">http://norrnext.com/nnt_downloads/free/plg_jmb_jshopping_last_seen_products_1.0.1.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://www.norrnext.com/nnt_downloads/free/plg_jmb_jshopping_last_seen_products_1.0.2.zip</downloadurl>
 		</downloads>
 		<maintainer>NorrNext</maintainer>
-		<maintainerurl>http://norrnext.com</maintainerurl>
+		<maintainerurl>https://www.norrnext.com</maintainerurl>
 		<targetplatform name="joomla" version="3.3"/>
 	</update>
 </updates>

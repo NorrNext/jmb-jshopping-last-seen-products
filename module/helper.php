@@ -11,8 +11,7 @@ defined('_JEXEC') or die();
 /**
  * The helper class of a module
  *
- * @package  Jmb_JShopping_Last_Seen_Products
- * @since    1.0
+ * @since  1.0
  */
 abstract class ModJmbJShoppingLastSeenProducts
 {
@@ -67,6 +66,10 @@ abstract class ModJmbJShoppingLastSeenProducts
 
 			for ($i = 0; $i < $count; $i++)
 			{
+				$products[$i]->link = SEFLink('index.php?option=com_jshopping&controller=product&task=view&category_id='
+					. $products[$i]->category_id . '&product_id=' . $products[$i]->product_id, 1
+				);
+
 				$productCurrency = $currencies[$products[$i]->currencyId];
 
 				if (!$productCurrency)
