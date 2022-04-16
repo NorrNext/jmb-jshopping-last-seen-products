@@ -1,3 +1,6 @@
+![last-seen](https://user-images.githubusercontent.com/3432048/163679266-1d86f3bb-48ba-45e0-9ef1-51b03be08f4c.jpeg)
+
+
 Description:
 ============
 This module displays JoomShopping products being viewed by other visitors. 
